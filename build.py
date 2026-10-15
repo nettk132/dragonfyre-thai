@@ -1,5 +1,8 @@
 import json,os,sys,zipfile
 SP=sys.argv[1]; OUT=sys.argv[2]
+# Thai font size / vertical shift (bigger shift = lower). Override: build.py SP OUT SIZE SHIFT
+TH_SIZE=float(sys.argv[3]) if len(sys.argv)>3 else 11.0
+TH_SHIFT=float(sys.argv[4]) if len(sys.argv)>4 else 0.8
 m={}
 for f in os.listdir(os.path.join(SP,'t')):
     s=json.load(open(os.path.join(SP,'chunks',f),encoding='utf-8')); t=json.load(open(os.path.join(SP,'t',f),encoding='utf-8'))
@@ -9,9 +12,9 @@ z.writestr('pack.mcmeta',json.dumps({"pack":{"pack_format":15,"description":"แ
 F=os.path.join(SP,'font')
 z.write(os.path.join(F,'thai.ttf'),'assets/thaifix/font/thai.ttf'); z.write(os.path.join(F,'OFL.txt'),'FONT_LICENSE_OFL.txt')
 fd={"providers":[{"type":"reference","id":"minecraft:include/space"},{"type":"reference","id":"minecraft:include/default"},
- {"type":"ttf","file":"thaifix:thai.ttf","size":8.5,"oversample":4.0,"shift":[0,1.2],"skip":""},{"type":"reference","id":"minecraft:include/unifont"}]}
+ {"type":"ttf","file":"thaifix:thai.ttf","size":TH_SIZE,"oversample":4.0,"shift":[0,TH_SHIFT],"skip":""},{"type":"reference","id":"minecraft:include/unifont"}]}
 z.writestr('assets/minecraft/font/default.json',json.dumps(fd))
-TT={"providers":[{"type":"ttf","file":"thaifix:thai.ttf","size":8.5,"oversample":4.0,"shift":[0,1.2],"skip":""}]}
+TT={"providers":[{"type":"ttf","file":"thaifix:thai.ttf","size":TH_SIZE,"oversample":4.0,"shift":[0,TH_SHIFT],"skip":""}]}
 # Thai TTF ahead of unifont in every font that references it (other packs' default.json, Force Unicode, uniform)
 z.writestr('assets/minecraft/font/include/unifont.json',json.dumps(TT))
 z.writestr('assets/minecraft/font/uniform.json',json.dumps(TT))
