@@ -1,0 +1,10 @@
+{
+"gui.xaero_potion_effects_blink": "Blink When Runs Out",
+"gui.xaero_armour_main_hand": "Main Hand Item",
+"gui.xaero_armour_off_hand": "Off-Hand Item",
+"gui.xaero_no_durability": "None",
+"gui.xaero_held_centered_position": "Held Items When Centered",
+"gui.xaero_held_centered_position_screen_edges": "Edges",
+"gui.xaero_held_centered_position_hotbar": "Hotbar",
+"gui.xaero_better_pvp_server_profiles": "Better PVP Server Settings"
+}

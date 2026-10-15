@@ -1,0 +1,17 @@
+{
+"item.bountybags.uncommon_loot_bag": "Uncommon Bounty Bag",
+"item.bountybags.rare_loot_bag": "Rare Bounty Bag",
+"item.bountybags.legendary_loot_bag": "Legendary Bounty Bag",
+"item.bountybags.dragon_loot_bag": "Dragon Bounty Bag",
+"item.bountybags.warden_loot_bag": "Warden Bounty Bag",
+"item.bountybags.wither_loot_bag": "Wither Bounty Bag",
+"item.bountybags.epic_loot_bag": "Epic Bounty Bag",
+"creativetab.bountybags.bounty_bags": "Bounty Bags",
+"subtitles.bountybags.uncommon_bag_open": "Uncommon Bag Opens",
+"subtitles.bountybags.rare_bag_open": "Rare Bag Opens",
+"subtitles.bountybags.epic_bag_open": "Epic Bag Opens",
+"subtitles.bountybags.legendary_bag_open": "Legendary Bag Opens",
+"message.bountybags.luck_upgrade": "Luck upgraded your bag to %s!",
+"tooltip.bountybags.right_click_to_open": "Right-click to open",
+"tooltip.bountybags.shift_right_click_to_view": "Shift-right-click to view possible outcomes"
+}
