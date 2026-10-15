@@ -11,6 +11,10 @@ z.write(os.path.join(F,'thai.ttf'),'assets/thaifix/font/thai.ttf'); z.write(os.p
 fd={"providers":[{"type":"reference","id":"minecraft:include/space"},{"type":"reference","id":"minecraft:include/default"},
  {"type":"ttf","file":"thaifix:thai.ttf","size":8.5,"oversample":4.0,"shift":[0,1.2],"skip":""},{"type":"reference","id":"minecraft:include/unifont"}]}
 z.writestr('assets/minecraft/font/default.json',json.dumps(fd))
+TT={"providers":[{"type":"ttf","file":"thaifix:thai.ttf","size":8.5,"oversample":4.0,"shift":[0,1.2],"skip":""}]}
+# Thai TTF ahead of unifont in every font that references it (other packs' default.json, Force Unicode, uniform)
+z.writestr('assets/minecraft/font/include/unifont.json',json.dumps(TT))
+z.writestr('assets/minecraft/font/uniform.json',json.dumps(TT))
 W=os.path.join(SP,'work')
 for f in os.listdir(W):
     d=json.load(open(os.path.join(W,f),encoding='utf-8')); import re
