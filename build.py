@@ -1,8 +1,8 @@
 import json,os,sys,zipfile
 SP=sys.argv[1]; OUT=sys.argv[2]
 # Thai font size / vertical shift (bigger shift = lower). Override: build.py SP OUT SIZE SHIFT
-TH_SIZE=float(sys.argv[3]) if len(sys.argv)>3 else 11.0
-TH_SHIFT=float(sys.argv[4]) if len(sys.argv)>4 else 0.8
+TH_SIZE=float(sys.argv[3]) if len(sys.argv)>3 else 12.0
+TH_SHIFT=float(sys.argv[4]) if len(sys.argv)>4 else 0.1
 m={}
 for f in os.listdir(os.path.join(SP,'t')):
     s=json.load(open(os.path.join(SP,'chunks',f),encoding='utf-8')); t=json.load(open(os.path.join(SP,'t',f),encoding='utf-8'))
